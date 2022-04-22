@@ -32,4 +32,10 @@ secret_message = [
 #   слова, идущее в обратном порядке, нужно получить за 1 срез (используя отрицательный шаг)
 #   Если нужны вычисления и разные пробы - делайте это в консоли пайтона, тут нужен только результат
 
-# TODO вывести расшифрованное сообщение
+secret_message1: str = secret_message[0][3]
+secret_message2: str = secret_message[1][9:13]
+secret_message3: str = secret_message[2][5:14:2]
+secret_message4: str = secret_message[3][12:6:-1]
+secret_message5: str = secret_message[4][20:15:-1]
+
+print(secret_message1,  secret_message2,  secret_message3,  secret_message4,  secret_message5)

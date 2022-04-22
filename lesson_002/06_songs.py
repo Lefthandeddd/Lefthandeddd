@@ -3,6 +3,9 @@
 
 # Есть список песен группы Depeche Mode со временем звучания с точностью до долей минут
 
+from turtle import onclick
+
+
 violator_songs = [
     ['World in My Eyes', 4.86],
     ['Sweetest Perfection', 4.43],
@@ -20,8 +23,14 @@ violator_songs = [
 # Точность указывается в функции round(a, b)
 # где a, это число которое надо округлить, а b количество знаков после запятой
 # более подробно про функцию round смотрите в документации https://docs.python.org/3/search.html?q=round
+count_songs: float = 0
 
-# TODO здесь ваш код
+for song in range(len(violator_songs)):
+    if violator_songs[song][0] == 'Halo' or 'Enjoy the Silence' or 'Clean':
+        count_songs += violator_songs[song][1]
+
+print(f'Три песни звучат {round(count_songs,2)} минут')
+
 
 # Есть словарь песен группы Yellow со временем звучания с точностью до долей минут
 pocket_universe_songs = {
@@ -41,7 +50,11 @@ pocket_universe_songs = {
 # Распечатайте общее время звучания трех песен: 'On Track', 'To the Sea' и 'Beyond Mirrors'
 #   А другие три песни звучат приблизительно ХХХ минут
 
-# TODO здесь ваш код
+on_track: float = pocket_universe_songs['On Track']
+to_the_sea: float = pocket_universe_songs['To the Sea']
+beyond_mirrors: float = pocket_universe_songs['Beyond Mirrors']
+
+print(f'А другие три песни звучат приблизительно {on_track + to_the_sea + beyond_mirrors} минут')
 
 # Обратите внимание, что делать много вычислений внутри print() - плохой стиль.
 # Лучше заранее вычислить необходимое, а затем в print(xxx, yyy, zzz)
