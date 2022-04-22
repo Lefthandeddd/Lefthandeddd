@@ -18,11 +18,10 @@ my_family_height = [
 
 # Выведите на консоль рост отца в формате
 #   Рост отца - ХХ см
-family_dict = {member[0]: member[1:] for member in my_family_height}
-print(f'Рост мамы - {family_dict[my_family[0]]} см')
+print(f'Рост мамы - {my_family_height[0][1]} см')
 # Выведите на консоль общий рост вашей семьи как сумму ростов всех членов
 #   Общий рост моей семьи - ХХ см
-count_hight = 0
-for x in family_dict.values():
-    count_hight += int(x)
-    print(f'Общий рост моей семьи - {count_hight} см')
+sum_hight: int = 0
+for member in range(0, 4):
+    sum_hight += my_family_height[member][1]
+print(f'Общий рост моей семьи - {sum_hight} см')

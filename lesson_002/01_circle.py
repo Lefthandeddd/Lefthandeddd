@@ -44,7 +44,7 @@ print(f'{bool(radius >= ((point_2[1] ** 2) + (point_2[0] ** 2)) ** 0.5)}')
 #  и принтить правильный ответ - будет здорово
 # Ниже что получилось. Tuple[int] ты написал, чтобы было понятно, какого типа данные заходят?
 def check_point_inside_circle(point: Tuple[int]) -> bool:
-    long = ((point[1] ** 2) + (point[0] ** 2)) ** 0.5
+    long: float = ((point[1] ** 2) + (point[0] ** 2)) ** 0.5
     return round(long, 1)
 
 print(check_point_inside_circle(point_1))
