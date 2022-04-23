@@ -39,3 +39,5 @@ secret_message4: str = secret_message[3][12:6:-1]
 secret_message5: str = secret_message[4][20:15:-1]
 
 print(secret_message1,  secret_message2,  secret_message3,  secret_message4,  secret_message5)
+
+# Красавчик!!

@@ -25,3 +25,6 @@ sum_hight: int = 0
 for member in range(0, 4):
     sum_hight += my_family_height[member][1]
 print(f'Общий рост моей семьи - {sum_hight} см')
+
+# TODO тут прям нужно исправить: зачем запускать итерацию по ренжу, если ты можешь итерироваться по
+#  cписку членов семьи?
