@@ -15,8 +15,17 @@ sites = {
 
 distances = {}
 
-# TODO здесь заполнение словаря
+
+distances = {'Moscow': {'London': round(((sites['Moscow'][0] - sites['London'][0]) ** 2 + (sites['Moscow'][1] - sites['London'][1]) ** 2) ** 0.5, 2),
+                        'Paris': round(((sites['Moscow'][0] - sites['Paris'][0]) ** 2 + (sites['Moscow'][1] - sites['Paris'][1]) ** 2) ** 0.5, 2),
+                        },
+             'London': {'Moscow': round(((sites['London'][0] - sites['Moscow'][0]) ** 2 + (sites['London'][1] - sites['Moscow'][1]) ** 2) ** 0.5, 2),
+                        'Paris': round(((sites['London'][0] - sites['Paris'][0]) ** 2 + (sites['London'][1] - sites['Paris'][1]) ** 2) ** 0.5, 2),                   
+                        },
+             'Paris': {'Moscow': round(((sites['Paris'][0] - sites['Moscow'][0]) ** 2 + (sites['Paris'][1] - sites['Moscow'][1]) ** 2) ** 0.5, 2),
+                       'London': round(((sites['Paris'][0] - sites['London'][0]) ** 2 + (sites['Paris'][1] - sites['London'][1]) ** 2) ** 0.5, 2),                                     
+                       }
+             }
 
 print(distances)
-
-print('Hi')
+#я минут 40 думал как циклами это все заполнить.. не понимаю как итерироваться по ключам словаря самостоятельно, типо словарь[1][0] Вот где 1 он ошибку выдает, если делать словарь[city][0] то норм.
