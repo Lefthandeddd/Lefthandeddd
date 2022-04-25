@@ -52,7 +52,24 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 # WARNING для знающих циклы: БЕЗ циклов. Да, с переменными; да, неэффективно; да, копипаста.
 # Это задание на ручное вычисление - что бы потом понять как работают циклы и насколько с ними проще жить.
 
-# TODO здесь ваш код
+lamp_code: str = goods['Стол']
+lamps_item: dict = store[lamp_code][0]
+lamps_item2: dict = store[lamp_code][1]
+lamps_quantity: int = lamps_item['quantity'] + lamps_item2['quantity']
+lamps_price: int = lamps_item['price'] + lamps_item2['price']
+lamps_cost: int = lamps_quantity * lamps_price
+print('Стол -', lamps_quantity, 'шт, стоимость', lamps_cost, 'руб')
+
+lamp_code: str = goods['Стул']
+lamps_item: dict = store[lamp_code][0]
+lamps_item2: dict = store[lamp_code][1]
+lamps_item3: dict = store[lamp_code][2]
+lamps_quantity: int = lamps_item['quantity'] + lamps_item2['quantity'] + lamps_item3['quantity']
+lamps_price: int = lamps_item['price'] + lamps_item2['price'] + lamps_item3['price']
+lamps_cost: int = lamps_quantity * lamps_price
+print('Стул -', lamps_quantity, 'шт, стоимость', lamps_cost, 'руб')
+
+# Думал можно ли без циклов не создавать новые переменные, чтобы посчитать? не придумал.. 
 
 ##########################################################################################
 # ВНИМАНИЕ! После того как __ВСЯ__ домашняя работа сделана и запушена на сервер,         #
