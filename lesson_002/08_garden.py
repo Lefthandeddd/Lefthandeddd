@@ -27,3 +27,5 @@ print(only_flowers)
 # выведите на консоль те, которые растут на лугу, но не растут в саду
 only_flowers: set = meadow_set.difference(garden_set)
 print(only_flowers)
+
+# харош, зачёт
