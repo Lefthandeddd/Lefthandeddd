@@ -4,6 +4,9 @@
 
 # Есть словарь координат городов
 
+from ast import Break
+
+
 sites = {
     'Moscow': (550, 370),
     'London': (510, 510),
@@ -45,13 +48,36 @@ print(distances)
 # dict.items() - возвращает пару ключ-значение словаря (гугли если чё)
 
 # функция вида (назови нормально потом):
-def your_function(current_city: str, research_city: str) -> float:
-    return float
 
-'''
+
+
+#Сделал вариант с запросом к пользователю:
+cities_list: list= list(sites.keys())
+
+current_city: str = input(f'Введите город на выбор из списка {cities_list}, откуда стартуете: ')
+while current_city not in cities_list:
+    current_city: str = input(f'Вы ввели название города неверно. Пожалуйста, введите точное название из списка {cities_list}, откуда стартуете: ')
+
+research_city: str = input(f'Введите город на выбор из списка {cities_list}, куда едете: ')
+while research_city not in cities_list:
+    research_city: str = input(f'Вы ввели название города неверно. Пожалуйста, введите точное название из списка {cities_list}, откуда стартуете: ')
+
+answer: float = distances[current_city][research_city]
+print(f'От {current_city} до {research_city} {answer} км')
+
+
+#Второй вариант, где покажем все расстояния:
+current_city: str = ''
+research_city: str = ''
+
+
+def dist_calculate(current_city: str, research_city: str) -> float:
+    answer: float = distances[current_city][research_city]
+    print(f'От {current_city} до {research_city} {answer} км')
+
 for current_city in cities_list:
-    тут нужно задать ключ в словаре distances
     for research_city in cities_list:
         if current_city != research_city:
-            distances[current_city][research_city] = your_function(current_city, research_city) 
-'''
+            dist_calculate(current_city, research_city)
+
+#Немного не понял твою задачу, ты хотел, чтобы я перезаполнил словарь с помощью этой функции или создал функцию, которая переберет весь словарь и красиво напечатает его?
